@@ -24,14 +24,15 @@ namespace Boolean.CSharp.Main
 
             //TIP: Try passing in the passinger list? and returning the passingers.NumberOfPassengers() inside the method?
 
-            AeroplanePassengerManifest currentListOfPassingers = new AeroplanePassengerManifest();
-           
+            AeroplanePassengerManifest currentListOfPassengers = new AeroplanePassengerManifest();
+
             //write calling code here and method inside the Aeroplane class.
+            plane.FlightDetails(currentListOfPassengers);
             
 
             return plane;
         }
-        public Aeroplane Question2()
+        public bool Question2()
         {
             Aeroplane plane = new Aeroplane();
             plane.FlightDetails("LHR", "JFK");
@@ -41,9 +42,15 @@ namespace Boolean.CSharp.Main
             //      different number of params            
 
             //write calling code here and method inside the Aeroplane class.
+            AeroplanePassengerManifest currentListOfPassengers = new AeroplanePassengerManifest();
+            plane.FlightDetais(currentListOfPassengers, "Stavros Spiliopoulos");
 
-            return plane;
-
+            if (currentListOfPassengers.Passengers.Contains("Stavros Spiliopoulos"))
+            {
+                return true;
+            }
+            return false;
+         
         }
     }
 }

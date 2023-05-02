@@ -40,7 +40,13 @@ namespace Boolean.CSharp.Main.Misc
         
         public int FlightDetails(AeroplanePassengerManifest list)
         {
+            return list.NumberOfPassengers;
             throw new NotImplementedException();
+        }
+
+        public void FlightDetais(AeroplanePassengerManifest list, string name)
+        {
+            list.Passengers.Add(name);
         }
         
         
