@@ -31,7 +31,13 @@ namespace Boolean.CSharp.Main.Misc
             _journeyDetails = cancelledMessage;
             _flightCancelled = true;            
         }
-            
+
+        public void FlightDetails(AeroplanePassengerManifest list, string newPassenger)
+        {
+            list.addNewPassenger(newPassenger);
+        }
+
+
         public string FlightDetails()
         {
             return _journeyDetails;
@@ -40,7 +46,7 @@ namespace Boolean.CSharp.Main.Misc
         
         public int FlightDetails(AeroplanePassengerManifest list)
         {
-            throw new NotImplementedException();
+            return list.NumberOfPassengers;
         }
         
         
