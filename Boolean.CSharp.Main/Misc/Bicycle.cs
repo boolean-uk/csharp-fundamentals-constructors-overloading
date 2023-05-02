@@ -10,6 +10,11 @@ namespace Boolean.CSharp.Main.Misc
     {
         private int _wheelCount;
 
-        public int WheelCount { get; set; }
+        public Bicycle(int wheels)
+        {
+            _wheelCount = wheels;
+        }
+
+        public int WheelCount { get => _wheelCount;}
     }
 }
