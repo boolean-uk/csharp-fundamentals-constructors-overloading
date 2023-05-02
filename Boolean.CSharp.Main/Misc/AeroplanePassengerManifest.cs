@@ -47,6 +47,11 @@ namespace Boolean.CSharp.Main.Misc
 
         public List<string> Passengers => _passengers;
 
+        public void addNewPassenger (String name)
+        {
+            _passengers.Add (name);
+        }
+
         public int NumberOfPassengers { get { return _passengers.Count; } }
     }
 }
