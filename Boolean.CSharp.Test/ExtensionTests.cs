@@ -1,4 +1,5 @@
 ﻿using Boolean.CSharp.Main;
+using Boolean.CSharp.Main.Misc;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
@@ -17,14 +18,16 @@ namespace Boolean.CSharp.Test
             _extension = new Extension();
         }
         [Test]
-        private void TestQuestion1()
+        public void TestQuestion1()
         {
-
+            Aeroplane plane = new Aeroplane();
+            Assert.IsTrue(plane.FlightDetails(new AeroplanePassengerManifest()) > 1);
         }
         [Test]
-        private void TestQuestion2()
+        public void TestQuestion2()
         {
-
+            Aeroplane plane = new Aeroplane();
+            Assert.IsTrue(plane.FlightDetails(new AeroplanePassengerManifest()) < plane.FlightDetails(new AeroplanePassengerManifest(), "Laura"));
         }
     }
 }

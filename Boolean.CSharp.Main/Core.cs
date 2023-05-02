@@ -30,7 +30,7 @@ namespace Boolean.CSharp.Main
                 }
             */
             
-            Car car = new Car("Volkswagen");
+            Car car = new Car("Volkswagen", "Beetle");
             /*  When the car in instantiated, the constructor is passed a string
              in this case Volkswagen which is a Make of car is passed in.
              Within the constructor the 'string Make' variable has scope within the constructor and assiged to the _make member now visible to the whole class
@@ -132,12 +132,13 @@ namespace Boolean.CSharp.Main
              */
             Aeroplane plane = new Aeroplane();            
             plane.FlightDetails("LHR", "JFK");
-            
+
             //TODO:  5.  Call the FlightDetails method that sets the cancelled message and  cancel the flight
-           
+
             //TIP  as soon as you type plane.FlightDetails(   Visual Studios intellisense will present you with a dialog where you can see how many overloads there are
-            
+
             //write code here and inside the Aeroplane class
+            plane.FlightDetails("Cancel");
 
             return plane;
         }
