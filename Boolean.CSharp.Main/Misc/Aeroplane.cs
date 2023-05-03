@@ -42,7 +42,12 @@ namespace Boolean.CSharp.Main.Misc
         {
             return list.NumberOfPassengers;
         }
-        
+         
+        public List<string>FlightDetails(AeroplanePassengerManifest manifest, string anotherPassenger)
+        {
+            manifest.Add(anotherPassenger);
+            return manifest.Passengers;
+        }
         
         
         public bool IsFlightCancelled => _flightCancelled;

@@ -41,6 +41,10 @@ namespace Boolean.CSharp.Main
             //      different number of params            
 
             //write calling code here and method inside the Aeroplane class.
+            AeroplanePassengerManifest currentListOfPassingers = new AeroplanePassengerManifest();
+            plane.FlightDetails(currentListOfPassingers, "Joeri Luteijn");
+
+
 
             return plane;
 
