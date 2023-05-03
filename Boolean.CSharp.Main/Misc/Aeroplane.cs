@@ -12,11 +12,12 @@ namespace Boolean.CSharp.Main.Misc
         private string _arrivalAirport;
         private string _journeyDetails;
         private bool _flightCancelled;
-        
-        public Aeroplane()
-        {
-            
-        }
+
+       // private AeroplanePassengerManifest _passengerManifest;
+       //public Aeroplane()
+       // {
+       //     _passengerManifest = new AeroplanePassengerManifest();
+       // }
         public bool FlightDetails(string departureAirport, string arrivalAirport) 
         {
             _departureAirport = departureAirport;
@@ -25,7 +26,13 @@ namespace Boolean.CSharp.Main.Misc
             _flightCancelled = false;
             return _flightCancelled;        
         }  
-       
+     
+        public List<string> FlightDetails(AeroplanePassengerManifest manifest, string anotherPassenger)
+        {
+            manifest.AddAnotherPassenger(anotherPassenger);
+            return manifest.Passengers;
+        }
+
         public void FlightDetails(string cancelledMessage)
         {
             _journeyDetails = cancelledMessage;
@@ -40,11 +47,16 @@ namespace Boolean.CSharp.Main.Misc
         
         public int FlightDetails(AeroplanePassengerManifest list)
         {
-            throw new NotImplementedException();
+           return list.NumberOfPassengers;
         }
-        
-        
-        
+
+        //public int FlightDetails (AeroplanePassengerManifest manifest)
+        // {
+        //     return manifest.NumberOfPassengers;
+        // }
+
+
+
         public bool IsFlightCancelled => _flightCancelled;
     
     
