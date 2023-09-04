@@ -40,9 +40,14 @@ namespace Boolean.CSharp.Main.Misc
         
         public int FlightDetails(AeroplanePassengerManifest list)
         {
-            throw new NotImplementedException();
+            return list.NumberOfPassengers;
         }
-        
+         
+        public List<string>FlightDetails(AeroplanePassengerManifest manifest, string anotherPassenger)
+        {
+            manifest.Add(anotherPassenger);
+            return manifest.Passengers;
+        }
         
         
         public bool IsFlightCancelled => _flightCancelled;
