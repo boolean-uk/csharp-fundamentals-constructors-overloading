@@ -25,9 +25,10 @@ namespace Boolean.CSharp.Main
             /// and return the count?
             
             AeroplanePassengerManifest currentListOfPassingers = new AeroplanePassengerManifest();
-           
+
             //write calling code here and method inside the Aeroplane class.
-            
+            plane.FlightDetails(currentListOfPassingers); // setting manifest
+            int numberOfPassingers = plane.Getnumbers(); // using method added
 
             return plane;
         }
@@ -41,7 +42,8 @@ namespace Boolean.CSharp.Main
             //      different number of params            
 
             //write calling code here and method inside the Aeroplane class.
-
+            string newPassengerName = "Dylan Verwimp"; // my name as passenger
+            plane.AddPassenger(newPassengerName);
             return plane;
 
         }

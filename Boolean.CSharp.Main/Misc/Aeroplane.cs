@@ -12,6 +12,7 @@ namespace Boolean.CSharp.Main.Misc
         private string _arrivalAirport;
         private string _journeyDetails;
         private bool _flightCancelled;
+        public AeroplanePassengerManifest _passengerManifest;   //added for manifest and changed to public
         
         public Aeroplane()
         {
@@ -38,11 +39,22 @@ namespace Boolean.CSharp.Main.Misc
         }
 
         
-        public int FlightDetails(AeroplanePassengerManifest list)
+        public void FlightDetails(AeroplanePassengerManifest list)
         {
-            throw new NotImplementedException();
+            _passengerManifest = list; // added list
         }
-        
+        //added new method to get amount of passengers
+        public int Getnumbers()
+        {
+            return _passengerManifest?.NumberOfPassengers ?? 0;
+        }
+        // overloading
+        public void AddPassenger(string newPassenger)
+        {
+            if (_passengerManifest == null) 
+                _passengerManifest = new AeroplanePassengerManifest();
+            _passengerManifest.Passengers.Add(newPassenger);
+        }
         
         
         public bool IsFlightCancelled => _flightCancelled;
