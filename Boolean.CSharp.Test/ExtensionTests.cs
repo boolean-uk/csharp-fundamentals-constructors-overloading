@@ -1,4 +1,5 @@
 ﻿using Boolean.CSharp.Main;
+using Boolean.CSharp.Main.Misc;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
@@ -17,14 +18,19 @@ namespace Boolean.CSharp.Test
             _extension = new Extension();
         }
         [Test]
-        private void TestQuestion1()
+        public void TestQuestion1() //diy testing
         {
-
+            Aeroplane plane = _extension.Question1();
+            Assert.IsTrue(plane.Getnumbers() > 0);
         }
         [Test]
-        private void TestQuestion2()
+        public void TestQuestion2() //diy testing
         {
-
+            Aeroplane plane = _extension.Question2();
+            AeroplanePassengerManifest manifest = new AeroplanePassengerManifest();
+            int initialNumberOfPassengers = manifest.NumberOfPassengers;
+            Assert.AreEqual(initialNumberOfPassengers + 1, plane.Getnumbers());
+            Assert.IsTrue(plane._passengerManifest.Passengers.Contains("Dylan Verwimp"));
         }
     }
 }
