@@ -48,6 +48,11 @@ namespace Boolean.CSharp.Main.Misc
         public List<string> Passengers => _passengers;
 
         public int NumberOfPassengers { get { return _passengers.Count; } }
+
+        internal void FlightDetails()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
 

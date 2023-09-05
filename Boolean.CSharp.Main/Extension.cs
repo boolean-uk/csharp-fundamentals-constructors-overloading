@@ -24,8 +24,8 @@ namespace Boolean.CSharp.Main
             ////TIP: Examine the FlightDetails and find the one that has the AeroplanePassingerManifest as a parameter.  Pass that into the method
             /// and return the count?
             
-            AeroplanePassengerManifest currentListOfPassingers = new AeroplanePassengerManifest();
-           
+            //AeroplanePassengerManifest currentListOfPassengers = new AeroplanePassengerManifest();
+            plane.FlightDetails(123);
             //write calling code here and method inside the Aeroplane class.
             
 
