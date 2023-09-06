@@ -43,11 +43,9 @@ namespace Boolean.CSharp.Main.Misc
                     "Rick Wright"
          };
 
-        
-
         public List<string> Passengers => _passengers;
 
         public int NumberOfPassengers { get { return _passengers.Count; } }
     }
-}
 
+}
