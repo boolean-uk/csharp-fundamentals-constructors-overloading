@@ -121,7 +121,8 @@ namespace Boolean.CSharp.Main
              */
 
             Aeroplane plane = new Aeroplane();
-            plane.FlightDetails("LHR", "JFK");
+            // plane.FlightDetails("LHR", "JFK");
+            plane.FlightDetails("The flight has been cancelled.");
 
             // TODO:  5.  Call the FlightDetails method that sets the cancelled message and  cancel the flight
 
