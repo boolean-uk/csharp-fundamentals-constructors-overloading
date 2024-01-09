@@ -30,7 +30,7 @@ namespace Boolean.CSharp.Main
                 }
             */
             
-            Car car = new Car("Volkswagen");
+            Car car = new Car("Volkswagen", "Amodel");
             /*  When the car in instantiated, the constructor is passed a string
              in this case Volkswagen which is a Make of car is passed in.
              Within the constructor the 'string Make' variable has scope within the constructor and assiged to the _make member now visible to the whole class
@@ -43,11 +43,7 @@ namespace Boolean.CSharp.Main
 
             //TIP if you click on the Car class name above, right click and then select 'Go to Definition' it'll take you straight to the code
 
-           
-
-
             return car;
-
         }
 
         public bool Question2()
@@ -92,11 +88,11 @@ namespace Boolean.CSharp.Main
             //See there is somewhere to store the number of wheels the bike has 
             //but no constructor to set this
             //TODO: 3. Add a constructor to the Bicycle class that populates the _wheelCount variable
-            Bicycle bike = new Bicycle();
+            Bicycle bike = new Bicycle(2);
 
             return bike;
-
         }
+
         public Unicycle Question4()
         {
             //Examine the Unicycle class
@@ -108,12 +104,9 @@ namespace Boolean.CSharp.Main
             
             //TIP  see we already have an internal member for the unicyclist name:  _nameOfUnicyclist so you can use this to store the name internally
             //      it is good practice to name internal class variable with an _ at the beginning
-            Unicycle unicycle = new Unicycle();
+            Unicycle unicycle = new Unicycle("Ole");
                       
-            
-
             return unicycle;
-
         }
 
         public Aeroplane Question5()
@@ -131,7 +124,7 @@ namespace Boolean.CSharp.Main
 
              */
             Aeroplane plane = new Aeroplane();            
-            plane.FlightDetails("LHR", "JFK");
+            plane.FlightDetails("cancelledMessage");
             
             //TODO:  5.  Call the FlightDetails method that sets the cancelled message and  cancel the flight
            
