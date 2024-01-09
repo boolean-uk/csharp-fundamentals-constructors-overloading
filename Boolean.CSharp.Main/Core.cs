@@ -72,7 +72,7 @@ namespace Boolean.CSharp.Main
              */
             //TODO 2. Ensure both constructors on the Motorbike class set the cc of the Motorcycle to 373.
             Motorbike myMotorbike = new Motorbike("KTM", "Duke");
-
+            Console.WriteLine(myMotorbike.CC);
             if(myMotorbike.CC > 0)
             {
                 return true;

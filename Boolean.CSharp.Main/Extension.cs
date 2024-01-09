@@ -1,8 +1,4 @@
-﻿
-
-
-
-using System.Reflection.Metadata.Ecma335;
+﻿using System.Reflection.Metadata.Ecma335;
 
 namespace Boolean.CSharp.Main
 {
@@ -32,16 +28,7 @@ namespace Boolean.CSharp.Main
         //TODO: 4. subtract, which accepts a String and a char and returns a string with all instances of the provided char removed        
         public string subtract(string a, char b)
         {
-            string result = "";
-
-            foreach (char c in a)
-            {
-                if (c != b)
-                {
-                    result.Append(c);
-                }
-            }
-            return result;
+            return a.Replace(b.ToString(), string.Empty);
         }
 
         //TODO: 5. multiply, which accepts two ints and returns an int (first int multiplied by second int)
@@ -70,10 +57,10 @@ namespace Boolean.CSharp.Main
         {
             int[] result = new int[a.Length];
 
-            foreach (string c in a)
+            for (int i = 0;i < a.Length; i++)
             {
-                int.TryParse(c, out int number);
-                result.Append(number);
+                int.TryParse(a[i], out int number);
+                result[i] = number * b;
             }
             return result;
         }
