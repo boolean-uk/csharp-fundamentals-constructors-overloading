@@ -4,7 +4,7 @@
     {
         private int _wheelCount;
 
-        public Bicycle(int wheelCount) // Added constructor
+        public Bicycle(int wheelCount)
         {
             _wheelCount = wheelCount;
         }

@@ -4,7 +4,7 @@
     {
         private string _nameOfUnicyclist;
 
-        public Unicycle(string nameOfUnicyclist) // Added constructor
+        public Unicycle(string nameOfUnicyclist)
         {
             _nameOfUnicyclist = nameOfUnicyclist;
         }

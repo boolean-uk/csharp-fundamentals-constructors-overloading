@@ -10,7 +10,7 @@
             _model = string.Empty;
             _make = string.Empty;
         }
-        public Car(string Make , string Model) // Modified constructor
+        public Car(string Make , string Model)
         {
             _make = Make;
             _model = Model;
