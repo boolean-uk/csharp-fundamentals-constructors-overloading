@@ -1,17 +1,12 @@
 ﻿using Boolean.CSharp.Main;
 using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Boolean.CSharp.Test
 {
     [TestFixture]
     public class ExtensionTests
     {
- 
+
 
         [Test]
         public void TestQuestion1()
@@ -21,7 +16,7 @@ namespace Boolean.CSharp.Test
             float b = 2.0f;
 
             Extension extension = new Extension();
-            
+
             float result = extension.add(a, b);
 
             Assert.AreEqual(3.0f, result);
