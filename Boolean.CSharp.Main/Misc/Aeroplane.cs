@@ -42,7 +42,7 @@ namespace Boolean.CSharp.Main.Misc
         {
             throw new NotImplementedException();
         }
-        
+         
         
         
         public bool IsFlightCancelled => _flightCancelled;
