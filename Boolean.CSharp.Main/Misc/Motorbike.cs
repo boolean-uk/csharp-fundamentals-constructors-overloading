@@ -11,7 +11,7 @@ namespace Boolean.CSharp.Main.Misc
     {
         private string _make;
         private string _model;
-        private int _cc = 0;
+        private int _cc;
             
 
         public Motorbike()
@@ -21,14 +21,15 @@ namespace Boolean.CSharp.Main.Misc
             _model = string.Empty;
         }
         public Motorbike(string Make, string Model)
-        {            
+        {
+            _cc = 373;
             _make = Make;
             _model = Model;         
             
         }
         public string Make { get; }
         public string Model { get; }
-        public int CC { get; }
+        public int CC { get { return _cc; } }
 
     }
 }
