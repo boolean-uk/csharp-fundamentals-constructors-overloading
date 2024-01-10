@@ -12,7 +12,7 @@ namespace Boolean.CSharp.Main.Misc
         private string _make;
         private string _model;
         private int _cc = 0;
-            
+
 
         public Motorbike()
         {
@@ -20,15 +20,17 @@ namespace Boolean.CSharp.Main.Misc
             _make = string.Empty;
             _model = string.Empty;
         }
-        public Motorbike(string Make, string Model)
-        {            
+        public Motorbike(int cc, string Make, string Model)
+        {
+            _cc = 373;
             _make = Make;
-            _model = Model;         
-            
+            _model = Model;
+
         }
-        public string Make { get; }
-        public string Model { get; }
-        public int CC { get; }
+        // EXPLICITLY write the getter to return _make;
+        public string Make { get { return _make; } }
+        public string Model { get { return _model; } }
+        public int CC { get { return _cc; } }
 
     }
 }

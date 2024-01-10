@@ -12,5 +12,15 @@ namespace Boolean.CSharp.Main.Misc
 
         public string NameOfUnicyclist { get => _nameOfUnicyclist; set => _nameOfUnicyclist = value; }
         public int WheelCount { get; set; } = 1;
+
+        public Unicycle(string nameOfUnicyclist)
+        {
+            _nameOfUnicyclist = nameOfUnicyclist;
+        }
+
+        public Unicycle()
+        {
+            _nameOfUnicyclist = "";
+        }
     }
 }
