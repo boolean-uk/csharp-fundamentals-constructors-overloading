@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Boolean.CSharp.Main.Misc
 {
@@ -10,6 +11,17 @@ namespace Boolean.CSharp.Main.Misc
     {
         private int _wheelCount;
 
-        public int WheelCount { get; set; }
+        public int WheelCount { get { return _wheelCount; } }
+ 
+        public Bicycle(int wheelCount)
+        {
+            _wheelCount = wheelCount;
+        }
+
+        public Bicycle()
+        {
+            _wheelCount = 0;
+        }
+
     }
 }
