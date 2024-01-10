@@ -103,9 +103,10 @@ namespace Boolean.CSharp.Main
             //A unicycle is a bike with one wheel
             //Note the wheelcount has been assigned on the class's property in this case.            
             //Also note we are instantiating the class below even though there is no constructor on the class?!
-            
-            //TODO: 3. Add a constructor to the Unicycle class to accept/store the rider name and instantiate with your name below
-            
+
+
+            //(K:Should be TODO 4)TODO: 3. Add a constructor to the Unicycle class to accept/store the rider name and instantiate with your name below
+
             //TIP  see we already have an internal member for the unicyclist name:  _nameOfUnicyclist so you can use this to store the name internally
             //      it is good practice to name internal class variable with an _ at the beginning
             Unicycle unicycle = new Unicycle();
