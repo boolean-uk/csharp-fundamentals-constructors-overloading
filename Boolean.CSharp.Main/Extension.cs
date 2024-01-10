@@ -39,7 +39,7 @@ namespace Boolean.CSharp.Main
         }
 		//TODO: 6. multiply, which accepts a string and an int, and returns a string containing the provided string as many times as the provided int separated by a comma. E.g. multiply("Hello", 3) -> "Hello,Hello,Hello"
 		public string multiply (string a, int b) { 
-            if (b == 0)
+            if (b == 1)
             {
                 return a;
 
