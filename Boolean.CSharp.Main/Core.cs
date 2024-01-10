@@ -30,7 +30,7 @@ namespace Boolean.CSharp.Main
                 }
             */
             
-            Car car = new Car("Volkswagen");
+            Car car = new Car("Volkswagen", "Beetle");
             /*  When the car in instantiated, the constructor is passed a string
              in this case Volkswagen which is a Make of car is passed in.
              Within the constructor the 'string Make' variable has scope within the constructor and assiged to the _make member now visible to the whole class
@@ -75,7 +75,7 @@ namespace Boolean.CSharp.Main
 
              */
             //TODO 2. Ensure both constructors on the Motorbike class set the cc of the Motorcycle to 373.
-            Motorbike myMotorbike = new Motorbike("KTM", "Duke");
+            Motorbike myMotorbike = new Motorbike("KTM", "Duke", 373);
 
             if(myMotorbike.CC > 0)
             {
@@ -93,6 +93,7 @@ namespace Boolean.CSharp.Main
             //but no constructor to set this
             //TODO: 3. Add a constructor to the Bicycle class that populates the _wheelCount variable
             Bicycle bike = new Bicycle();
+
 
             return bike;
 
@@ -136,7 +137,7 @@ namespace Boolean.CSharp.Main
             //TODO:  5.  Call the FlightDetails method that sets the cancelled message and  cancel the flight
            
            //write code here 
-
+           plane.FlightDetails("Cancell my flight pleace...");
             return plane;
         }
 
