@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Boolean.CSharp.Main.Misc;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Boolean.CSharp.Main
 {
@@ -12,8 +13,8 @@ namespace Boolean.CSharp.Main
         public Car Question1()
         {
            
-            /*
-                Examine the code in the Car class.  There are 2 constructor methods, identified because they
+            
+            /*   Examine the code in the Car class.  There are 2 constructor methods, identified because they
                 have the same name as the class which in this case is Car..
 
                 
@@ -28,9 +29,11 @@ namespace Boolean.CSharp.Main
                     _make = Make;
                     _model = string.Empty;
                 }
-            */
+
+           */
             
-            Car car = new Car("Volkswagen");
+            
+            Car car = new Car("Volkswagen", "Beetle");
             /*  When the car in instantiated, the constructor is passed a string
              in this case Volkswagen which is a Make of car is passed in.
              Within the constructor the 'string Make' variable has scope within the constructor and assiged to the _make member now visible to the whole class
@@ -38,13 +41,12 @@ namespace Boolean.CSharp.Main
             e.g. In the Constructor signature:     public Car(string Make, string Model) 
             e.g. Instantiating:                    Car car = new Car("Volkswagen", "Beetle");
             */
-            
+
             //TODO: 1.  Change car instantiation code above,  pass in the make AND model. 
 
             //TIP if you click on the Car class name above, right click and then select 'Go to Definition' it'll take you straight to the code
 
-           
-
+            
 
             return car;
 
@@ -76,7 +78,7 @@ namespace Boolean.CSharp.Main
              */
             //TODO 2. Ensure both constructors on the Motorbike class set the cc of the Motorcycle to 373.
             Motorbike myMotorbike = new Motorbike("KTM", "Duke");
-
+            
             if(myMotorbike.CC > 0)
             {
                 return true;
@@ -108,7 +110,7 @@ namespace Boolean.CSharp.Main
             
             //TIP  see we already have an internal member for the unicyclist name:  _nameOfUnicyclist so you can use this to store the name internally
             //      it is good practice to name internal class variable with an _ at the beginning
-            Unicycle unicycle = new Unicycle();
+            Unicycle unicycle = new Unicycle("Jacob");
                       
             
 
@@ -132,11 +134,11 @@ namespace Boolean.CSharp.Main
              */
             Aeroplane plane = new Aeroplane();            
             plane.FlightDetails("LHR", "JFK");
-            
-            //TODO:  5.  Call the FlightDetails method that sets the cancelled message and  cancel the flight
-           
-           //write code here 
 
+            //TODO:  5.  Call the FlightDetails method that sets the cancelled message and  cancel the flight
+            
+            //write code here 
+            plane.FlightDetails("The flight has been cancelled.");
             return plane;
         }
 
