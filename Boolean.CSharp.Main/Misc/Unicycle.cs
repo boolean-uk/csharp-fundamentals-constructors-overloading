@@ -8,6 +8,10 @@ namespace Boolean.CSharp.Main.Misc
 {
     public class Unicycle
     {
+
+        public Unicycle() {
+            _nameOfUnicyclist = "Stian";
+        }
         private string _nameOfUnicyclist;
 
         public string NameOfUnicyclist { get => _nameOfUnicyclist; set => _nameOfUnicyclist = value; }
