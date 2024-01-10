@@ -20,7 +20,12 @@ namespace Boolean.CSharp.Main.Misc
         public Car(string Make)
         {
             _make = Make;
-            _model = string.Empty;
+            _model = _model;
+        }
+        public Car(string Make,string Model)
+        {
+            _make = Make;
+            _model = Model;
         }
 
         public string Make { get => _make; set => _make = value; }
