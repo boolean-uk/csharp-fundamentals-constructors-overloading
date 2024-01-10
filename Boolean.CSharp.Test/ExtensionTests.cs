@@ -40,7 +40,7 @@ namespace Boolean.CSharp.Test
 
             Assert.AreEqual(3.0, result);
         }
-
+        
         [Test]
         public void TestQuestion3()
         {
@@ -66,7 +66,7 @@ namespace Boolean.CSharp.Test
 
             Assert.IsTrue(result == "the quick brown fox jumps over the lay dog");
         }
-
+        
         [Test]
         public void TestQuestion5()
         {
@@ -90,7 +90,7 @@ namespace Boolean.CSharp.Test
             string result = extension.multiply(source, 3);
 
             Assert.IsTrue("Hello,Hello,Hello" == result);
-        }
+        } 
         [Test]
         public void TestQuestion7()
         {
