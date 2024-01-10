@@ -9,8 +9,16 @@ namespace Boolean.CSharp.Main.Misc
     public class Unicycle
     {
         private string _nameOfUnicyclist;
+        private int _wheelCount = 1;
+
+        public Unicycle(string NameOfUnicyclist)
+        {
+            _wheelCount = WheelCount;
+            _nameOfUnicyclist = NameOfUnicyclist;
+        }
 
         public string NameOfUnicyclist { get => _nameOfUnicyclist; set => _nameOfUnicyclist = value; }
-        public int WheelCount { get; set; } = 1;
+        public int WheelCount { get => _wheelCount; set => _wheelCount = value; }
+
     }
 }
