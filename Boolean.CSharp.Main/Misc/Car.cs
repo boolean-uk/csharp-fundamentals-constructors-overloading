@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection.Metadata.Ecma335;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Boolean.CSharp.Main.Misc
+﻿namespace Boolean.CSharp.Main.Misc
 {
     public class Car
     {
@@ -17,10 +10,10 @@ namespace Boolean.CSharp.Main.Misc
             _model = string.Empty;
             _make = string.Empty;
         }
-        public Car(string Make)
+        public Car(string Make, string v)
         {
             _make = Make;
-            _model = string.Empty;
+            _model = v;
         }
 
         public string Make { get => _make; set => _make = value; }
