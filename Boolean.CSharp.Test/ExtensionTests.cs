@@ -22,7 +22,8 @@ namespace Boolean.CSharp.Test
 
             Extension extension = new Extension();
             
-            float result = extension.add(a, b);
+            float result = extension.add(a,b);
+
 
             Assert.AreEqual(3.0f, result);
 
