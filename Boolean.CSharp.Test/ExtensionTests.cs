@@ -11,7 +11,7 @@ namespace Boolean.CSharp.Test
     [TestFixture]
     public class ExtensionTests
     {
- 
+        
 
         [Test]
         public void TestQuestion1()
@@ -28,6 +28,7 @@ namespace Boolean.CSharp.Test
 
 
         }
+        
         [Test]
         public void TestQuestion2()
         {
@@ -40,7 +41,7 @@ namespace Boolean.CSharp.Test
 
             Assert.AreEqual(3.0, result);
         }
-
+        
         [Test]
         public void TestQuestion3()
         {
@@ -53,7 +54,7 @@ namespace Boolean.CSharp.Test
 
             Assert.AreEqual(1.0f, result);
         }
-
+        
         [Test]
         public void TestQuestion4()
         {
@@ -66,7 +67,7 @@ namespace Boolean.CSharp.Test
 
             Assert.IsTrue(result == "the quick brown fox jumps over the lay dog");
         }
-
+        
         [Test]
         public void TestQuestion5()
         {
@@ -79,6 +80,7 @@ namespace Boolean.CSharp.Test
 
             Assert.AreEqual(10, result);
         }
+        
         [Test]
         public void TestQuestion6()
         {
@@ -91,6 +93,7 @@ namespace Boolean.CSharp.Test
 
             Assert.IsTrue("Hello,Hello,Hello" == result);
         }
+        
         [Test]
         public void TestQuestion7()
         {
@@ -107,6 +110,5 @@ namespace Boolean.CSharp.Test
 
 
         }
-
     }
 }
