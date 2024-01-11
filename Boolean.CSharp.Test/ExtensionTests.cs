@@ -1,33 +1,23 @@
 ﻿using Boolean.CSharp.Main;
 using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Boolean.CSharp.Test
 {
     [TestFixture]
     public class ExtensionTests
     {
- 
-
         [Test]
         public void TestQuestion1()
         {
-
             float a = 1.0f;
             float b = 2.0f;
 
             Extension extension = new Extension();
-            
-            float result = extension.add(a, b);
+            float result = extension.AddTwoFloats(a, b);
 
             Assert.AreEqual(3.0f, result);
-
-
         }
+
         [Test]
         public void TestQuestion2()
         {
@@ -35,8 +25,7 @@ namespace Boolean.CSharp.Test
             double b = 2.0;
 
             Extension extension = new Extension();
-
-            double result = extension.add(a, b);
+            double result = extension.AddTwoDoubles(a, b);
 
             Assert.AreEqual(3.0, result);
         }
@@ -48,8 +37,7 @@ namespace Boolean.CSharp.Test
             float b = 1.0f;
 
             Extension extension = new Extension();
-
-            float result = extension.subtract(a, b);
+            float result = extension.SubtractTwoFloats(a, b);
 
             Assert.AreEqual(1.0f, result);
         }
@@ -61,8 +49,7 @@ namespace Boolean.CSharp.Test
             char z = 'z';
 
             Extension extension = new Extension();
-
-            string result = extension.subtract(source, z);
+            string result = extension.SubtractCharFromString(source, z);
 
             Assert.IsTrue(result == "the quick brown fox jumps over the lay dog");
         }
@@ -74,11 +61,11 @@ namespace Boolean.CSharp.Test
             int b = 5;
 
             Extension extension = new Extension();
-
-            int result = extension.multiply(a, b);
+            int result = extension.MultiplyTwoInts(a, b);
 
             Assert.AreEqual(10, result);
         }
+
         [Test]
         public void TestQuestion6()
         {
@@ -86,27 +73,23 @@ namespace Boolean.CSharp.Test
             int dupes = 3;
 
             Extension extension = new Extension();
-
-            string result = extension.multiply(source, 3);
+            string result = extension.MultiplyStringWithComma(source, 3);
 
             Assert.IsTrue("Hello,Hello,Hello" == result);
         }
+
         [Test]
         public void TestQuestion7()
         {
-            //multiply([], 3) -> [6, 21, 9]
             string[] source = { "2", "7", "3" };
             int multiplier = 3;
 
             Extension extension = new Extension();
-            var result = extension.multiply(source, multiplier);
+            var result = extension.MultiplyStringArrayWithInt(source, multiplier);
 
             int[] answer = { 6, 21, 9 };
 
             Assert.IsTrue(result.SequenceEqual(answer));
-
-
         }
-
     }
 }
