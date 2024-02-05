@@ -13,10 +13,12 @@ namespace Boolean.CSharp.Main.Misc
         private string _journeyDetails;
         private bool _flightCancelled;
         
+        // empty constructor
         public Aeroplane()
         {
             
         }
+        // constructor with two parameters
         public bool FlightDetails(string departureAirport, string arrivalAirport) 
         {
             _departureAirport = departureAirport;
@@ -42,12 +44,11 @@ namespace Boolean.CSharp.Main.Misc
         {
             throw new NotImplementedException();
         }
-        
-        
-        
-        public bool IsFlightCancelled => _flightCancelled;
-    
-    
-    
+
+
+
+        public bool IsFlightCancelled => _flightCancelled;  
+
     }
+
 }
