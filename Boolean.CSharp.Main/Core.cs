@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using Boolean.CSharp.Main.Misc;
@@ -30,7 +31,7 @@ namespace Boolean.CSharp.Main
                 }
             */
             
-            Car car = new Car("Volkswagen");
+            Car car = new Car("Volkswagen", "Beetle");
             /*  When the car in instantiated, the constructor is passed a string
              in this case Volkswagen which is a Make of car is passed in.
              Within the constructor the 'string Make' variable has scope within the constructor and assiged to the _make member now visible to the whole class
@@ -43,10 +44,7 @@ namespace Boolean.CSharp.Main
 
             //TIP if you click on the Car class name above, right click and then select 'Go to Definition' it'll take you straight to the code
 
-           
-
-
-            return car;
+               return car;
 
         }
 
@@ -92,7 +90,7 @@ namespace Boolean.CSharp.Main
             //See there is somewhere to store the number of wheels the bike has 
             //but no constructor to set this
             //TODO: 3. Add a constructor to the Bicycle class that populates the _wheelCount variable
-            Bicycle bike = new Bicycle();
+            Bicycle bike = new Bicycle(4);
 
             return bike;
 
@@ -104,11 +102,13 @@ namespace Boolean.CSharp.Main
             //Note the wheelcount has been assigned on the class's property in this case.            
             //Also note we are instantiating the class below even though there is no constructor on the class?!
             
-            //TODO: 3. Add a constructor to the Unicycle class to accept/store the rider name and instantiate with your name below
+            //TODO: 3. Add a constructor to the Unicycle class to accept/store the rider name and instantiate
+            //with your name below
             
-            //TIP  see we already have an internal member for the unicyclist name:  _nameOfUnicyclist so you can use this to store the name internally
-            //      it is good practice to name internal class variable with an _ at the beginning
-            Unicycle unicycle = new Unicycle();
+            //TIP  see we already have an internal member for the unicyclist name:  _nameOfUnicyclist so you
+            // can use this to store the name internally
+            // it is good practice to name internal class variable with an _ at the beginning
+            Unicycle unicycle = new Unicycle("Rose");
                       
             
 
@@ -132,12 +132,14 @@ namespace Boolean.CSharp.Main
              */
             Aeroplane plane = new Aeroplane();            
             plane.FlightDetails("LHR", "JFK");
-            
-            //TODO:  5.  Call the FlightDetails method that sets the cancelled message and  cancel the flight
-           
-           //write code here 
 
+            //TODO:  5.  Call the FlightDetails method that sets the cancelled message and
+            //cancel the flight
+
+            //write code here 
+            plane.FlightDetails("Your flight is canceled!");
             return plane;
+           
         }
 
     }
