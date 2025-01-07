@@ -87,7 +87,7 @@ namespace Boolean.CSharp.Test
 
             Extension extension = new Extension();
 
-            string result = extension.multiply(source, 3);
+            string result = extension.multiply(source, dupes);
 
             Assert.IsTrue("Hello,Hello,Hello" == result);
         }
