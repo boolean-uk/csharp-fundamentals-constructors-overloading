@@ -30,7 +30,7 @@ namespace Boolean.CSharp.Main
                 }
             */
             
-            Car car = new Car("Volkswagen");
+            Car car = new Car("Volkswagen", "IDK cars");
             /*  When the car in instantiated, the constructor is passed a string
              in this case Volkswagen which is a Make of car is passed in.
              Within the constructor the 'string Make' variable has scope within the constructor and assiged to the _make member now visible to the whole class
@@ -108,7 +108,7 @@ namespace Boolean.CSharp.Main
             
             //TIP  see we already have an internal member for the unicyclist name:  _nameOfUnicyclist so you can use this to store the name internally
             //      it is good practice to name internal class variable with an _ at the beginning
-            Unicycle unicycle = new Unicycle();
+            Unicycle unicycle = new Unicycle("Nikolai L. Børseth");
                       
             
 
@@ -132,11 +132,11 @@ namespace Boolean.CSharp.Main
              */
             Aeroplane plane = new Aeroplane();            
             plane.FlightDetails("LHR", "JFK");
-            
-            //TODO:  5.  Call the FlightDetails method that sets the cancelled message and  cancel the flight
-           
-           //write code here 
 
+            //TODO:  5.  Call the FlightDetails method that sets the cancelled message and  cancel the flight
+
+            //write code here 
+            plane.FlightDetails("No plane for you");
             return plane;
         }
 
