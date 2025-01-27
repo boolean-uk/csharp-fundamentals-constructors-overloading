@@ -42,11 +42,10 @@ namespace Boolean.CSharp.Main
             //TODO: 1.  Change car instantiation code above,  pass in the make AND model. 
 
             //TIP if you click on the Car class name above, right click and then select 'Go to Definition' it'll take you straight to the code
+            Car car1 = new Car("VW", "Bubble");
 
-           
 
-
-            return car;
+            return car1;
 
         }
 
@@ -108,7 +107,7 @@ namespace Boolean.CSharp.Main
             
             //TIP  see we already have an internal member for the unicyclist name:  _nameOfUnicyclist so you can use this to store the name internally
             //      it is good practice to name internal class variable with an _ at the beginning
-            Unicycle unicycle = new Unicycle();
+            Unicycle unicycle = new Unicycle("Timmy");
                       
             
 
@@ -136,9 +135,9 @@ namespace Boolean.CSharp.Main
             //TODO:  5.  Call the FlightDetails method that sets the cancelled message and  cancel the flight
            
            //write code here 
+           plane.FlightDetails("Flight cancelled!");
 
             return plane;
         }
-
     }
 }
